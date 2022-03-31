@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.399">
+    <testcase classname="Login" name="As a user, I want to login" time="4.289">
+        <failure message="Can't create connection expected object to not be null" type="java.lang.AssertionError"><![CDATA[Given API Url and Headers...................................................passed
+When I enter '7838983405'...................................................passed
+Then An OTP should be generated.............................................passed
+And Read OTP from database for '7838983405'.................................failed
+
+StackTrace:
+java.lang.AssertionError: Can't create connection expected object to not be null
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.assertNotNull(Assert.java:942)
+	at utilities.DatabaseUtility.selectPreparedStatement(DatabaseUtility.java:45)
+	at utilities.DatabaseUtility.fetchSingleData(DatabaseUtility.java:65)
+	at helper.LoginHelper.readOtpFromTable(LoginHelper.java:50)
+	at stepDef.Login_setpDef.readOtp(Login_setpDef.java:33)
+	at ✽.Read OTP from database for '7838983405'(file:///Users/neharawat/Documents/paymentsAutomationNew/src/test/resources/features/login.feature:11)
+]]></failure>
+    </testcase>
+</testsuite>
